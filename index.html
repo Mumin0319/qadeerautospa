@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Qadeer Detailing - Professional Mobile Car Detailing Services in Anaheim, CA.">
+  <title>Qadeer Detailing</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Qadeer Detailing</a>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="animate-text">Luxury Mobile Detailing in Anaheim</h1>
+      <p class="animate-text">We bring the showroom to your driveway. Top-tier detailing for cars, trucks, and SUVs.</p>
+      <a href="services.html" class="cta-btn">Explore Our Services</a>
+    </div>
+  </section>
+
+  <!-- Services Highlights -->
+  <section class="services-highlights">
+    <h2>Our Premium Services</h2>
+    <div class="services-grid">
+      <div class="service-box">
+        <img src="images/exterior-detail.jpg" alt="Exterior Detailing">
+        <h3>Exterior Detailing</h3>
+        <p>Experience a pristine finish with our complete exterior detailing service, including washing, waxing, and polishing.</p>
+      </div>
+      <div class="service-box">
+        <img src="images/interior-detail.jpg" alt="Interior Detailing">
+        <h3>Interior Detailing</h3>
+        <p>Deep cleaning and revitalization of your vehicle's interior. Leather care, vacuuming, and stain removal.</p>
+      </div>
+      <div class="service-box">
+        <img src="images/full-detail.jpg" alt="Full Detailing">
+        <h3>Full Detailing</h3>
+        <p>A comprehensive detailing service covering both exterior and interior for a complete refresh.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Qadeer Detailing. All Rights Reserved. Serving Anaheim, CA and Surrounding Areas.</p>
+  </footer>
+
+  <!-- JS for Animations -->
+  <script>
+    // GSAP Text Animation
+    gsap.from(".animate-text", { opacity: 0, y: 50, duration: 1.5, stagger: 0.3 });
+
+    // Smooth Scroll Effect
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
